@@ -1,0 +1,33 @@
+<head>
+  <title>Pronunciation Finder</title>
+</head>
+
+<body>
+
+{{> wordSearch}}
+
+{{> wordList}}
+
+</body>
+
+<template name="wordSearch">
+  Find Word<br/>
+  <input type="text" id="__word">
+  <button type="button" id="findWord">Find</button>
+</template>
+
+<template name="wordList">
+  <h1>Word List</h1>
+  <table>
+      {{#each entries}}
+        <tr>
+          <td>
+            {{word}}
+          </td>
+          <td>
+              {{phoneme}}</td>
+        </tr>
+      {{/each}}
+  </table>
+  <p> end list</p>
+</template>
