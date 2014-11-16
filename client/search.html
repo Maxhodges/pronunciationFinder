@@ -4,30 +4,121 @@
 
 <body>
 
-{{> wordSearch}}
+<h1>Pronunciation Finder</h1>
 
-{{> wordList}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+          {{> kana}}<br>
+      </div>
+      <!--<div class="row">-->
+      <!--{{> phonemeSearch}}<br>-->
+      <!--</div>-->
+      <div class="row">
+          {{> phonemeList}}
+      </div>
+    </div>
 
+    <div class="col-md-6">
+        {{> wordSearch}}<br>
+        {{> wordList}}
+    </div>
+  </div>
+</div>
 </body>
+
+<template name="phonemeSearch">
+  Find by Phoneme<br/>
+  <input type="text" id="__phoneme">
+  <button type="button" id="__findByPhoneme">Find</button>
+</template>
+
+<template name="kana">
+
+  <div class="col-md-6">
+    Select Kana
+    <select class="form-control" id="kana">
+
+      <option value="AA1">a</option>
+      <option value="IY1">i</option>
+      <option value="UW1">u</option>
+      <option value="EH1">e</option>
+      <option value="OW1">o</option>
+
+      <option value="K AA2">ka</option>
+      <option value="K IY0">ki</option>
+      <option value="K UW1">ku</option>
+      <option value="K EH1">ke</option>
+      <option value="K OW1">ko</option>
+
+      <option value="T AA2">ta</option>
+      <option value="CH IY0">chi</option>
+      <option value="T S UW0">tsu</option>
+      <option value="T EH1">te</option>
+      <option value="T OW1">to</option>
+
+    </select>
+    <button type="button" id="__findKana">Find</button>
+  </div>
+
+</template>
 
 <template name="wordSearch">
   Find Word<br/>
   <input type="text" id="__word">
-  <button type="button" id="findWord">Find</button>
+  <button type="button" id="__findWord">Find</button>
 </template>
 
 <template name="wordList">
-  <h1>Word List</h1>
-  <table>
-      {{#each entries}}
+  <div>
+    <h5>Resutls by word</h5>
+    <table>
+        {{#each entries}}
+          <tr>
+            <td>
+                {{word}}
+            </td>
+            <td>
+                {{phoneme}}
+            </td>
+          </tr>
+        {{/each}}
+    </table>
+  </div>
+</template>
+
+<template name="phonemeList">
+  <div>
+    <h5>works with phoneme: <span class="text-danger">{{phoneme}}</span></h5>
+    <table class="table table-condensed">
+      <thead>
+      <tr>
+        <th>star</th>
+        <th>word</th>
+        <th>pronunciation</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      {{#each phonemeResults}}
         <tr>
           <td>
-            {{word}}
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="star">
+              </label>
+            </div>
           </td>
           <td>
-              {{phoneme}}</td>
+              {{word}}&nbsp;&nbsp;
+          </td>
+          <td>
+            <small>{{phoneme}}</small>
+          </td>
         </tr>
       {{/each}}
-  </table>
-  <p> end list</p>
+      </tbody>
+    </table>
+  </div>
 </template>
