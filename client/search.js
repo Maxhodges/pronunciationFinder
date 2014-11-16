@@ -31,23 +31,14 @@ if (Meteor.isClient) {
        var re = new RegExp(".*" + searchWord + ".*", "i");
 
 
-        var words = Words.find({'phoneme': {$regex: re}});
+        var words = Words.find({'phoneme': {$regex: re}}, {limit:500});
 
         console.log("done searching");
 
         return words;
-
-        //  var words = Words.find({'phoneme': {$regex: ".*" + Session.get("word") + ".*"}}, function(err, res) {
-        //    console.log(err);
-        //    console.log(res);
-        //  });
-        //
-        //  return words;
-        //}
-        // Words.find({'phoneme': 'EY1'});
       }
     },
-     //words: words.find({phoneme: {$regex: ".*" + 'HH' + ".*"}}, {limit:20})
+
 
 
   })
