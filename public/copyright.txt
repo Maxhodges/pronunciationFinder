@@ -1,0 +1,32 @@
+mongodb://client-34dd2ba5:3a7d0b55-4deb-1cfd-549e-d3d0020973cc@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+mongodb://client-db742fbf:12b53dd8-02d6-6c7f-2dee-7598ad43dc2d@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+
+mongodb://client-55ee5f93:d630e66a-1260-eea3-c235-8a6d58c773a1@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+
+
+mongodb://client-74b76f71:f7a17d57-cddf-2b99-e5ff-18f1a277f35d@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+
+
+mongodb://client:387shff-fe52-07d4-69a4-ba321f3665fe7@c0.meteor.m0.mongolayer.com:27017/yoapp_meteor_com
+Take the values and put into mongorestore like this
+
+mongorestore -u client -p 387shff-fe52-07d4-69a4-ba321f3665fe7 -h c0.meteor.m0.mongolayer.com:27017 -db yoapp_meteor_com /home/user/dump/yoapp
+I just dumped a prod app to my local dev machine. Testing some new changes. Pushed code to a staging install on meteor.com and then used mongorestore to populate the staging database.
+
+
+
+mongodb://client-56951129:f2e3765f-1935-c07d-52a4-ebad456114f4@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+
+mongodb://client-f03b5b30:c9512c43-bc64-c241-758d-660d26b57d20@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+
+
+
+mongorestore -u client-f03b5b30 -p c9512c43-bc64-c241-758d-660d26b57d20 -h production-db-d1.meteor.io:27017 -db kanaphoneme_meteor_com /Users/maxhodges/Documents/github/kanaIllustrations/kana/public/dump/meteor
+
+ export PATH=$PATH:/mongodb/bin
+
+mongodb://client-f03b5b30:c9512c43-bc64-c241-758d-660d26b57d20@production-db-d1.meteor.io:27017/kanaphoneme_meteor_com
+maxMBP:kana maxhodges$
+
+maxMBP:kana maxhodges$ mongorestore -u client-f03b5b30 -p c9512c43-bc64-c241-758d-660d26b57d20 -h production-db-d1.meteor.io:27017 -db kanaphoneme_meteor_com /Users/maxhodges/Documents/github/kanaIllustrations/kana/public/dump/meteor
+connected to: production-db-d1.meteor.io:27017

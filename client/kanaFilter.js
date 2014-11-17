@@ -1,7 +1,24 @@
 Template.kanaFilter.events({
+
+
+
+  'change #kana': function(e, t) {
+    console.log("kana click");
+
+    Session.set("phoneme", t.find('#kana').value);
+
+    Session.set("kana", t.find("#kana option:selected").text);
+    Session.get("kana");
+
+    console.log(Session.get("phoneme"));
+    Session.set("page", 1);
+  },
+
   'click #__findKana': function(e, t) {
     console.log("kana click");
+
     Session.set("phoneme", t.find('#kana').value);
+
     Session.set("kana", t.find("#kana option:selected").text);
     Session.get("kana");
 
@@ -17,5 +34,9 @@ Template.kanaFilter.helpers({
     console.log("selectOptions");
     return Kana.find();
   },
+
+  //phoneme: function () {
+  //  return this.find('#kana').value;
+  //}
 
 });

@@ -6,10 +6,8 @@ Template.phonemeList.events({
   },
 
   'click #__loadMore': function(e, t) {
-
     var page = Session.get("page");
     Session.set("page", page + 1);
-
   },
 
 });
