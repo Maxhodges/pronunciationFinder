@@ -5,6 +5,13 @@ Template.phonemeList.events({
     console.log("add " + this.word + " to user's public starred list");
   },
 
+  'click #__loadMore': function(e, t) {
+
+    var page = Session.get("page");
+    Session.set("page", page + 1);
+
+  },
+
 });
 
 Template.phonemeList.helpers({
@@ -48,23 +55,23 @@ Template.phonemeList.helpers({
 
       //db.words.find({ $and: [{'phonemes': "HH"} ,{"phonemes": "AA1"}, {"phoneme": "/.*HH AA1.*/"}]}  )
 
-  //    var phonemes = Words.find(query, function(e, r) {
-  //          if (e)
-  //            console.log(r);
-  //        }
-  //      )
-  //      ;
-  //    return phonemes;
-  //  }
-  //},
+      //    var phonemes = Words.find(query, function(e, r) {
+      //          if (e)
+      //            console.log(r);
+      //        }
+      //      )
+      //      ;
+      //    return phonemes;
+      //  }
+      //},
 
-  var phonemes = Words.find({'phoneme': {$regex: re}}, {sort: {word: 1}, limit: 100}, function(e, r) {
-    if (e)
-      console.log(r);
-  });
-return phonemes;
-}
-},
+      var phonemes = Words.find({'phoneme': {$regex: re}}, {sort: {word: 1}}, function(e, r) {
+        if (e)
+          console.log(r);
+      });
+      return phonemes;
+    }
+  },
 
 })
 ;
