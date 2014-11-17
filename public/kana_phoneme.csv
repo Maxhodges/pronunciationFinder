@@ -9,7 +9,7 @@ ki,K IY0
 ku,K KUW1
 ke,K EH1
 ko,K OW1
-sa,S AA2
+sa,S AE0
 shi,S IY1
 su,S UW1
 se,S EH1
@@ -29,8 +29,19 @@ hi,HH IY1
 hu,HH UW1
 he,HH EH1
 ho,HH OW1
-ma,AA1
-mi,IY1
-mu,UW1
-me,EH1
-mo,OW1
+ma,M AA2
+mi,M IY1
+mu,M UW1
+me,M EH1
+mo,M OW1
+ya,Y AA1
+yu,Y UW1
+yo,Y OW1
+ra,R AA1
+ri,R IY1
+ru,R UW1
+re,R EH1
+ro,R OW1
+wa,W AA2
+wo,W OW1
+n,N

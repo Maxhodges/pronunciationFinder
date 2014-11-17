@@ -1,3 +1,5 @@
+Kana = new  Meteor.Collection('kana');
+
 Words = new  Meteor.Collection('words');
 
 // Words.find({sound: ".*AA1.*"}}).fetch();
