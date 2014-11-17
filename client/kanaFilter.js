@@ -32,7 +32,7 @@ Template.kanaFilter.helpers({
 
   selectOptions: function() {
     console.log("selectOptions");
-    return Kana.find();
+    return Kana.find({}, {sort: {sortKey: 1}} );
   },
 
   //phoneme: function () {

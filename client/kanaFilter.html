@@ -5,11 +5,16 @@
     <span>
       <select class="form-control" id="kana">
           {{#each selectOptions}}
-            <option value="{{phoneme}}" data-kana="{{kana}}">{{kana}} ({{phoneme}})</option>
+            {{#if hiragana}}
+            <option value="{{phoneme}}" data-kana="{{kana}}">{{kana}} ({{hiragana}}, {{katakana}}) - {{phoneme}}</option>
+              {{else}}
+              <option value="{{phoneme}}" data-kana="{{kana}}">{{kana}} - {{phoneme}}</option>
+
+            {{/if}}
           {{/each}}
       </select>
+      <!--<h1>すス</h1>-->
         <!--<button type="button" class="btn btn-primary" id="__findKana">Find</button>-->
       </span>
   </div>
-
 </template>
