@@ -1,6 +1,6 @@
 <template name="phonemeList">
   <div>
-    <h5>Words with phoneme: <span class="text-danger">{{selectedPhoneme}}</span></h5>
+    <!--<h5><span class="text-danger"><strong>{{selectedKana}}</strong></span> pronunciation: <span class="text-success">{{selectedPhoneme}}</span></h5>-->
     <table class="table table-condensed">
       <thead>
       <tr>
@@ -31,7 +31,7 @@
       </tbody>
     </table>
     <div>
-      <button type="button" class="btn btn-primary btn-lg" id="__loadMore">Load More</button>
+      <button type="button" class="btn btn-primary btn-lg {{buttonDisabledStyle}}" id="__loadMore">Load More</button>
     </div>
 
   </div>

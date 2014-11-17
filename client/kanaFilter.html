@@ -5,7 +5,7 @@
     <span>
       <select class="form-control" id="kana">
           {{#each selectOptions}}
-            <option value="{{phoneme}}">{{kana}}</option>
+            <option value="{{phoneme}}" data-kana="{{kana}}">{{kana}} ({{phoneme}})</option>
           {{/each}}
       </select>
         <!--<button type="button" class="btn btn-primary" id="__findKana">Find</button>-->

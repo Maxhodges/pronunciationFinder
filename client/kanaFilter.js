@@ -7,7 +7,7 @@ Template.kanaFilter.events({
 
     Session.set("phoneme", t.find('#kana').value);
 
-    Session.set("kana", t.find("#kana option:selected").text);
+    Session.set("kana", t.$("#kana option:selected").data("kana"));
     Session.get("kana");
 
     console.log(Session.get("phoneme"));
