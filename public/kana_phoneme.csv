@@ -1,0 +1,36 @@
+kana, phoneme
+a,AA1
+i,IY1
+u,UW1
+e,EH1
+o,OW1
+ka,K AA2
+ki,K IY0
+ku,K KUW1
+ke,K EH1
+ko,K OW1
+sa,S AA2
+shi,S IY1
+su,S UW1
+se,S EH1
+so,S OW1
+ta,T AA2
+chi,CH IY0
+tsu,T S UW0
+te,T EH1
+to,T OW1
+na,N AA1
+ni,N IY1
+nu,N UW1
+ne,N EH1
+no,N OW1
+ha,HH AA1
+hi,HH IY1
+hu,HH UW1
+he,HH EH1
+ho,HH OW1
+ma,AA1
+mi,IY1
+mu,UW1
+me,EH1
+mo,OW1
