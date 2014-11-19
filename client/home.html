@@ -1,0 +1,27 @@
+<template name="home">
+<head></head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <h2>Find words which share kana phonemes</h2>
+
+      <div class="col-md-6">
+        <div class="row">
+          {{> kanaFilter}}<br>
+        </div>
+        <!--<div class="row">-->
+        <!--{{> phonemeSearch}}<br>-->
+        <!--</div>-->
+        <div class="row">
+          {{> phonemeList}}
+        </div>
+      </div>
+
+      <!--<div class="col-md-6">-->
+      <!--{{> wordSearch}}<br>-->
+      <!--{{> wordList}}-->
+      <!--</div>-->
+    </div>
+  </div>
+  </body>
+</template>
