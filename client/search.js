@@ -15,7 +15,7 @@ Template.wordList.helpers({
       // do nothing
     } else {
       var re = new RegExp(".*" + searchWord + ".*", "i");
-      var words = Words.find({'word': {$regex: re}}, {sort: {word: 1}, limit: 100}, function(e, r) {
+      var words = Words.find({'word': {$regex: re}}, {sort: {word: 1}, limit: 2000}, function(e, r) {
         if (e)
           console.log(r);
       });
